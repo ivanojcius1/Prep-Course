@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { stringify } = require("git-url-parse");
+
 function crearUsuario() {
   // Crea una Clase de ES6 o una función constructor llamada "Usuario"
   // Debe aceptar un objeto "opciones" con las propiedades "usuario", "nombre", "email" y "password"
@@ -9,11 +11,22 @@ function crearUsuario() {
   // Devuelve la clase
   // Tu código:
 }
+function Usuario(opciones) {
+  this.usuario = opciones.usuario;
+  this.nombre = opciones.nombre;
+  this.email = opciones.email;
+  this.password = opciones.password;
+
+}
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
+
+  Constructor.prototype.saludar = function () {
+    return "Hello World!"
+  }
 }
 
 function agregarStringInvertida() {
@@ -23,23 +36,41 @@ function agregarStringInvertida() {
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
 }
-
+String.prototype.reverse = function () {
+  var separated = this.split("");
+  var inverter = separated.reverse();
+  var result = invert.join("");
+  return result
+}
 // ---------------------------------------------------------------------------//
-  //Crea el constructor de la clase "Persona"
-  //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
-  //Debe tener un método llamado "detalle" que nos devuelve un objeto con las propiedades de la persona y sus valores.
-  //Ej: { 
-    //   Nombre: 'Juan',
-    //   Apellido: 'Perez',
-    //   Edad: 22,
-    //   Domicilio: 'Saavedra 123'
-    //  }
+//Crea el constructor de la clase "Persona"
+//Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
+//Debe tener un método llamado "detalle" que nos devuelve un objeto con las propiedades de la persona y sus valores.
+//Ej: { 
+//   Nombre: 'Juan',
+//   Apellido: 'Perez',
+//   Edad: 22,
+//   Domicilio: 'Saavedra 123'
+//  }
 
-  class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
-      // Crea el constructor:
+class Persona {
+  constructor(nombre, apellido, edad, domicilio) {
+    // Crea el constructor:
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.domicilio = domicilio;
+    this.detalle = function () {
+
 
     }
+    return {
+      Nombre: this.nombre,
+      Apellido: this.apellido,
+      Edad: this.edad,
+      Domicilio: this.domicilio
+    }
+  }
 }
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
@@ -47,12 +78,12 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
 }
-  
+
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
 }
-  
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -62,6 +93,6 @@ module.exports = {
   agregarMetodoPrototype,
   agregarStringInvertida,
   crearInstanciaPersona,
-  agregarMetodo, 
+  agregarMetodo,
   Persona
 };

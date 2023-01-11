@@ -1,0 +1,16 @@
+variable: es un contenedor que puede contener cualquier cosas, como por ejemplo numeros o cadenas de caracteres.
+
+string: es una cadena de caracteres puede ser un nombre, un apellido o una palabra cualquiera
+
+funciones: una funcion es una unidad de correspondencia
+entre dos magnitudes, donde un valor depende de otro 
+y al evaluarlo se obtiene un resultado en éste caso
+por cada argumento tenemos un retorno por parte de dicha funcion
+
+if: es un tipo de condicional que sirve para comparar 
+distintas cosas como por ejemplo si algo es mas grande 
+que otra cosa, o si es igual, etc.
+
+boolenaos: son un tipo de valor que consta de dos 
+condiciones como en el aljebra de boole por ejemplo 
+verdadero o falso, (true, false respectivamente).
