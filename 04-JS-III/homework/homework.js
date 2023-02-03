@@ -307,7 +307,7 @@ function continueStatement(numero) {
   }
   return nuevoArray;
 }
-//sarasa
+//listo
 
 // No modificar nada debajo de esta línea
 // --------------------------------
